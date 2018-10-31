@@ -1,0 +1,174 @@
+@font-face
+ {
+    font-family: YandexSansText;
+    src: url(./fonts/YandexSansText-Regular.ttf);
+}
+
+p,
+a
+ {
+    font-family: YandexSansText;
+}
+
+.changeView
+ {
+    display: none;
+}
+
+.changeView + label > div
+ {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+.changeView + label > div
+ {
+    transition: .4s;
+}
+
+.changeView:checked + label > div:nth-child(1)
+ {
+    transform: rotate(90deg) translate(-4px, -5px);
+    transform-origin: top left;
+}
+
+.changeView:checked + label > div:nth-child(2)
+ {
+    transform: rotate(90deg) translate(0, 0);
+    transform-origin: center center;
+}
+
+.changeView:checked + label > div:nth-child(3)
+ {
+    transform: rotate(90deg) translate(8px, 2px);
+    transform-origin: top right;
+}
+
+.shortDescription
+ {
+    display: none;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.changeView:checked ~ main article
+ {
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+}
+
+.changeView:checked ~ main article img
+ {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+}
+
+.changeView:checked ~ main article .shortDescription
+ {
+    display: block;
+}
+
+.changeView:checked ~ main article .longDescription
+ {
+    display: none;
+}
+
+.changeView:checked ~ main article h2
+ {
+    font-size: 20px;
+    margin: 10px;
+}
+
+article
+ {
+    width: 500px;
+    height: 600px;
+    overflow: hidden;
+    margin: auto;
+    border: 1px solid darkgray;
+    border-radius: .5%;
+    transition: .4s;
+    box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, .3);
+}
+
+article:hover
+ {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .5);
+}
+
+article img
+ {
+    width: 95%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 12px auto;
+}
+
+article h2
+ {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+p
+ {
+    margin: 0;
+    color: rgb(50, 50, 50);
+}
+
+article h2 a
+ {
+    color: rgb(40, 40, 40);
+    text-decoration: none;
+}
+
+article h2 a:hover
+ {
+    color: blue;
+    transition: .6s;
+}
+
+article h2 a:hover::after
+ {
+    content: '😺';
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+article img:hover
+ {
+    transform: scale(1.03) rotate(-1deg);
+    transition: .8s;
+}
+
+.longDescription .age
+ {
+    margin-bottom: 10px;
+}
+
+.age::before
+ {
+    content: 'Возраст: ';
+}
+
+.breed::before
+ {
+    content: 'Порода: ';
+}
+
+.diseases::before
+ {
+    content: 'Болезни: ';
+}
+
+.longDescription
+ {
+    margin: 12px;
+}
