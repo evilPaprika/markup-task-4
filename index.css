@@ -10,37 +10,28 @@ a
     font-family: YandexSansText;
 }
 
+.burger-menu
+{
+    font-size: 30px;
+}
+
 .changeView
  {
     display: none;
 }
 
-.changeView + label > span
- {
-    width: 30px;
-    height: 4px;
-    background-color: black;
-    transition: .4s;
-    display: block;
-    margin: 5px 0;
+.burger-menu
+{
+    display: inline-block;
+    transition: .4s ease;
+    margin-left: 10px;
+    cursor: pointer;
+    user-select: none;
 }
 
-.changeView:checked + label > span:nth-child(1)
+.changeView:checked + label
  {
-    transform: rotate(90deg) translate(-4px, -5px);
-    transform-origin: top left;
-}
-
-.changeView:checked + label > span:nth-child(2)
- {
-    transform: rotate(90deg) translate(0, 0);
-    transform-origin: center center;
-}
-
-.changeView:checked + label > span:nth-child(3)
- {
-    transform: rotate(90deg) translate(8px, 2px);
-    transform-origin: top right;
+    transform: rotate(90deg);
 }
 
 .shortDescription
